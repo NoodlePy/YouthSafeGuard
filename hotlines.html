@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouthSafeGuard (YSG)</title>
+    <link rel="stylesheet" href="navbar_style.css">
+    <style>
+        /* Your CSS styles can be placed here or linked to an external CSS file */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        /* Add more CSS styles for your headings, lists, and links as needed */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 108px;
+            border-radius: 5px;
+            margin-bottom: 108px;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        a {
+            padding: 5px;
+            border-radius: 5px;
+            background-color: #333;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Add more CSS styles as needed for the content */
+        .hotline {
+            margin-bottom: 20px;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            width: fit-content;
+        }
+
+        /* Popup container */
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+.small_heading {
+    text-decoration: underline;
+    text-decoration-color: #333;
+}
+
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="heading_container">
+                <h1>YouthSafeGuard (YSG)</h1>
+            </div>
+        </nav>
+        <ul class="nav_ul">
+            <li class="nav_li"><a class="nav_a first_button" href="./about.html">About</a></li>
+            <li class="nav_li"><a class="nav_a" href="./resources.html">Resources</a></li>
+            <li class="nav_li"><a class="nav_a" href="./hotlines.html">Hotlines</a></li>
+        </ul>
+    </header>
+    <section class="content">
+        <h2>If you suspect that a child is being abused or neglected, or if you are a child who is being mistreated, call these numbers immediately:</h2>
+        <p class="small_heading">Emergency</p>
+        <div class="hotline">
+            <div class="popup" type="text" id="num" onclick="showNumPopup()">911
+                <span class="popuptext" id="numPopup1">Copied Number!</span>
+            </div>
+        </div>
+        <p class="small_heading">Urgent Healthcare</p>
+        <div class="hotline">
+            <div class="popup" type="text" id="num" onclick="showNumPopup2()">112
+                <span class="popuptext" id="numPopup2">Copied Number!</span>
+            </div>
+        </div>
+        <p class="small_heading">ChildCare.gov</p>
+        <div class="hotline">
+            <div class="popup" type="text" id="num" onclick="showNumPopup3()">800-422-4453
+                <span class="popuptext" id="numPopup3">Copied Number!</span>
+            </div>
+        </div>
+
+        <!-- Add more hotline numbers and information as needed -->
+    </section>
+
+
+    <script src="hotline_script.js"></script>
+    <footer style="text-align: center; padding: 20px; background-color: #333; color: white;">
+        <p>&copy; 2023 YouthSafeGuard (YSG)</p>
+    </footer>
+</body>
+</html>
